@@ -13,6 +13,7 @@
   --muted:     #55555f;
   --muted-2:   #6b6b75;
   --ink:       #0e0e12;   /* dark-band background */
+  --cream:     #f4efe2;   /* footer background */
 
   /* Brand orange */
   --accent:    #ff4e02;   /* fills, large display accents */
@@ -30,7 +31,7 @@
 
 /* ---- Dark bands: re-scope tokens to light text so sections that sit
    over photography or need contrast stay legible on a white site ---- */
-.hero, .page-hero, .founder-feat, .footer{
+.hero, .page-hero, .founder-feat{
   color:var(--text);
   --text:#f4f4f5;
   --muted:rgba(255,255,255,.74);
@@ -39,7 +40,6 @@
   --surface:#17171c; --surface-2:#1e1e24;
   --accent-hi:#ff7a3d;   /* bright orange text on dark */
 }
-.footer{ background:var(--ink); }
 .founder__photo figcaption{ color:#fff; }
 .founder__photo figcaption span{ color:rgba(255,255,255,.72); }
 .founder__photo figcaption em{ color:#ff7a3d; }
@@ -462,10 +462,10 @@ body.is-loaded .preloader{ pointer-events:none; }
 /* =========================================================
    FOOTER
    ========================================================= */
-.footer{ background:var(--ink); border-top:1px solid var(--line); overflow:hidden; }
+.footer{ background:var(--cream); border-top:1px solid var(--line); overflow:hidden; }
 .footer__cols{
   max-width:var(--maxw); margin:0 auto; padding:clamp(3rem,6vw,5rem) var(--pad) 2rem;
-  display:grid; grid-template-columns:1.6fr 1fr 1fr 1.3fr; gap:2rem;
+  display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr 1.2fr; gap:2rem;
 }
 .footer__brand p{ color:var(--muted); margin-top:1rem; max-width:28ch; }
 .footer__nav{ display:grid; gap:.7rem; align-content:start; }
@@ -475,10 +475,12 @@ body.is-loaded .preloader{ pointer-events:none; }
 .footer__wordmark{
   font-family:var(--f-display); text-align:center;
   font-size:clamp(5rem,26vw,24rem); line-height:.8;
-  letter-spacing:-.01em; color:rgba(255,255,255,.04);
-  -webkit-text-stroke:1px rgba(255,255,255,.14);
+  letter-spacing:-.01em; color:transparent;
+  -webkit-text-stroke:1.5px rgba(14,14,18,.17);
   padding:0 var(--pad); user-select:none;
+  transition:color .4s ease, -webkit-text-stroke-color .4s ease;
 }
+.footer__wordmark:hover{ color:var(--accent); -webkit-text-stroke-color:var(--accent); }
 .footer__base{
   max-width:var(--maxw); margin:0 auto; padding:1.5rem var(--pad) 2.2rem;
   display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;
