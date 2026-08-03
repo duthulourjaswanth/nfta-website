@@ -46,7 +46,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/styles.css?v=5" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=6" />
 </head>
 <body>
 
@@ -61,7 +61,7 @@
   <a class="skip" href="#top">Skip to content</a>
 
   <!-- ============ NAV ============ -->
-  <header class="nav" id="nav">
+  <header class="nav nav--light" id="nav">
     <a href="#top" class="nav__brand" aria-label="NFTA home">
       <svg class="nav__mark" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
         <path d="M2 9h2v6H2zM20 9h2v6h-2zM5 7h2v10H5zM17 7h2v10h-2zM8 11h8v2H8z" fill="currentColor"/>
@@ -81,28 +81,33 @@
   </header>
 
   <!-- ============ HERO ============ -->
-  <section class="hero" id="top">
-    <div class="hero__media">
-      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80&auto=format&fit=crop" alt="Personal trainer coaching in the gym" />
-      <div class="hero__scrim"></div>
-    </div>
-
-    <div class="hero__inner">
-      <div class="hero__top">
-        <p class="eyebrow">Nutrition &amp; Fitness Trainers Alliance</p>
-        <h2 class="hero__lead">
-          A career as a professional fitness trainer takes more than a certificate —
-          <em>it takes real skill.</em>
-        </h2>
-        <a href="contact.html" class="btn btn--ghost hero__join">
-          Enquire Now <span class="btn__arrow">↗</span>
-        </a>
+  <section class="hero2" id="top">
+    <div class="hero2__inner">
+      <div class="hero2__text">
+        <p class="eyebrow">India's Premier Personal Trainer Academy</p>
+        <h1 class="hero2__title">Become The <span class="accent">Coach</span> They Trust</h1>
+        <p class="hero2__sub">A career in fitness takes more than a certificate — it takes real skill. NFTA trains personal trainers, nutritionists, and contest-prep coaches through science-backed certifications, led by an International Master Trainer.</p>
+        <div class="hero2__cta">
+          <a href="contact.html" class="btn btn--solid">Enquire Now <span class="btn__arrow">↗</span></a>
+          <a href="courses.html" class="btn btn--outline">Browse Courses</a>
+        </div>
+        <div class="hero2__trust">
+          <div class="hero2__stat"><b>2500+</b><span>Trainers certified</span></div>
+          <div class="hero2__stat"><b>2007</b><span>Coaching since</span></div>
+          <div class="hero2__stat"><b>3</b><span>Certifications</span></div>
+        </div>
       </div>
 
-      <h1 class="hero__display" aria-label="Train to coach">
-        <span class="line"><span class="w">TRAIN</span></span>
-        <span class="line"><span class="w">TO&nbsp;COACH</span></span>
-      </h1>
+      <div class="hero2__visual">
+        <div class="hero2__accent" aria-hidden="true"></div>
+        <figure class="hero2__img">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&q=80&auto=format&fit=crop" alt="NFTA coach guiding a client through a lift" />
+        </figure>
+        <div class="hero2__badge">
+          <b>Founder-led</b>
+          <span>by Intl. Master Trainer "Sharu"</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -437,6 +442,6 @@
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="assets/js/main.js?v=5"></script>
+  <script src="assets/js/main.js?v=7"></script>
 </body>
 </html>

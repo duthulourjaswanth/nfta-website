@@ -159,6 +159,13 @@ body.is-loaded .preloader{ pointer-events:none; }
   --text:#14141a;                 /* dark on the white bar */
   --muted:#3a3a44;
 }
+/* Home uses a light hero, so its nav is light glass + dark text by default */
+.nav--light{
+  background:rgba(255,255,255,.72);
+  border-bottom-color:var(--line);
+  --text:#14141a;
+  --muted:#3a3a44;
+}
 .nav__brand{ display:flex; align-items:center; gap:.5rem; color:var(--text); }
 .nav__mark{ color:var(--accent); }
 .nav__name{ font-family:var(--f-display); font-size:1.7rem; letter-spacing:.02em; }
@@ -213,6 +220,56 @@ body.is-loaded .preloader{ pointer-events:none; }
 }
 .hero__display .line{ display:block; overflow:hidden; }
 .hero__display .w{ display:inline-block; transform:translateY(105%); }
+
+/* =========================================================
+   HERO 2 (light, split)
+   ========================================================= */
+.hero2{ background:var(--bg); overflow:hidden; }
+.hero2__inner{
+  max-width:var(--maxw); margin:0 auto;
+  padding:clamp(7rem,11vw,9rem) var(--pad) clamp(3rem,6vw,5rem);
+  display:grid; grid-template-columns:1.08fr .92fr; gap:clamp(2rem,5vw,4.5rem); align-items:center;
+  min-height:100svh;
+}
+.hero2__text .eyebrow{ margin-bottom:1.1rem; }
+.hero2__title{
+  font-family:var(--f-display); text-transform:uppercase; font-weight:400;
+  font-size:clamp(2.9rem,6.4vw,6.2rem); line-height:.92; letter-spacing:-.02em;
+  margin-bottom:1.4rem;
+}
+.hero2__title .accent{ color:var(--accent); }
+.hero2__sub{ color:var(--muted); font-size:clamp(1.02rem,1.4vw,1.22rem); max-width:46ch; }
+.hero2__cta{ display:flex; flex-wrap:wrap; gap:1rem; margin-top:2rem; }
+.hero2__trust{ display:flex; gap:clamp(1.4rem,3vw,2.6rem); margin-top:2.6rem; }
+.hero2__stat{ position:relative; padding-right:clamp(1.4rem,3vw,2.6rem); }
+.hero2__stat:not(:last-child)::after{ content:""; position:absolute; right:0; top:.2em; bottom:.2em; width:1px; background:var(--line); }
+.hero2__stat b{ font-family:var(--f-display); font-size:clamp(1.8rem,3vw,2.5rem); color:var(--accent); display:block; line-height:1; }
+.hero2__stat span{ font-family:var(--f-head); text-transform:uppercase; letter-spacing:.08em; font-size:.74rem; color:var(--muted); margin-top:.45rem; display:block; }
+
+.hero2__visual{ position:relative; justify-self:end; width:100%; max-width:480px; }
+.hero2__accent{
+  position:absolute; z-index:0; right:-4%; top:-6%; width:72%; height:82%;
+  background:var(--accent); border-radius:var(--r);
+}
+.hero2__img{ position:relative; z-index:1; border-radius:var(--r); overflow:hidden; box-shadow:0 40px 80px -40px rgba(0,0,0,.45); border:1px solid var(--line); }
+.hero2__img img{ width:100%; aspect-ratio:4/5; object-fit:cover; }
+.hero2__badge{
+  position:absolute; z-index:2; left:-1.5rem; bottom:1.6rem;
+  background:#fff; border:1px solid var(--line); border-radius:12px;
+  padding:.9rem 1.2rem; box-shadow:0 20px 40px -22px rgba(0,0,0,.4);
+  display:grid; gap:.15rem;
+}
+.hero2__badge b{ font-family:var(--f-head); text-transform:uppercase; letter-spacing:.04em; font-size:1rem; color:var(--text); }
+.hero2__badge span{ font-size:.78rem; color:var(--muted); }
+
+@media (max-width:900px){
+  .hero2__inner{ grid-template-columns:1fr; min-height:auto; gap:3rem; padding-top:6.5rem; }
+  .hero2__visual{ justify-self:start; max-width:420px; }
+}
+@media (max-width:480px){
+  .hero2__trust{ flex-wrap:wrap; gap:1.2rem 1.6rem; }
+  .hero2__badge{ left:1rem; }
+}
 
 /* =========================================================
    MARQUEE
