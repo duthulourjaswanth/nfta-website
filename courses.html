@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fitness Certification Courses in India | NFTA</title>
-  <meta name="description" content="Explore NFTA's fitness certification courses — personal trainer, nutrition, and contest-prep & body transformation programs. Certified, practical, career-ready." />
+  <title data-cms="text:courses.seo.title">Fitness Certification Courses in India | NFTA</title>
+  <meta name="description" content="Explore NFTA's fitness certification courses — personal trainer, nutrition, and contest-prep & body transformation programs. Certified, practical, career-ready." data-cms="content:courses.seo.description" />
   <meta name="keywords" content="fitness certification courses, personal trainer certification, nutrition certification, contest prep coach" />
   <link rel="canonical" href="https://nfta.co.in/courses.html" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b0b0d'/%3E%3Cpath d='M2 9h2v6H2zM20 9h2v6h-2zM5 7h2v10H5zM17 7h2v10h-2zM8 11h8v2H8z' fill='%23e11414'/%3E%3C/svg%3E" />
@@ -35,7 +35,7 @@
   <header class="nav" id="nav">
     <a href="index.html" class="nav__brand" aria-label="NFTA home">
       <svg class="nav__mark" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M2 9h2v6H2zM20 9h2v6h-2zM5 7h2v10H5zM17 7h2v10h-2zM8 11h8v2H8z" fill="currentColor"/></svg>
-      <span class="nav__name">NFTA</span>
+      <span class="nav__name" data-cms="text:site.brand.name">NFTA</span>
     </a>
     <nav class="nav__links" aria-label="Primary">
       <a href="index.html">Home</a>
@@ -43,101 +43,54 @@
       <a href="courses.html" aria-current="page">Courses</a>
       <a href="trainers.html">Trainers</a><a href="blog.html">Blog</a>
     </nav>
-    <a href="contact.html" class="btn btn--solid nav__cta">Contact Us</a>
+    <a href="contact.html" class="btn btn--solid nav__cta" data-cms="text:site.nav.ctaLabel">Contact Us</a>
     <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
   </header>
 
-  <section class="page-hero" id="main">
-    <div class="page-hero__bg"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80&auto=format&fit=crop" alt="" /></div>
+  <section class="page-hero" id="main" data-cms-show="courses.hero.show">
+    <div class="page-hero__bg"><img data-cms="src:courses.hero.bgImage" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80&auto=format&fit=crop" alt="" /></div>
     <div class="page-hero__inner">
       <p class="page-hero__crumb"><a href="index.html">Home</a> / Courses</p>
-      <p class="eyebrow page-hero__eyebrow">Certification Programs</p>
-      <h1 class="page-hero__title">Choose Your <span class="accent">Path</span></h1>
-      <p class="page-hero__sub">Every NFTA certification is built to do one thing: prepare you to actually coach — not just pass a test. Pick the path that matches where you want your career to go.</p>
+      <p class="eyebrow page-hero__eyebrow" data-cms="text:courses.hero.eyebrow">Certification Programs</p>
+      <h1 class="page-hero__title"><span data-cms="text:courses.hero.titlePre">Choose Your</span> <span class="accent" data-cms="text:courses.hero.titleAccent">Path</span></h1>
+      <p class="page-hero__sub" data-cms="text:courses.hero.sub">Every NFTA certification is built to do one thing: prepare you to actually coach — not just pass a test. Pick the path that matches where you want your career to go.</p>
     </div>
   </section>
 
   <!-- COURSE ROWS -->
-  <section class="wrap">
-    <!-- 1 -->
-    <article class="course" data-reveal>
-      <figure class="course__media"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80&auto=format&fit=crop" alt="Personal trainer coaching explosive strength work" /></figure>
-      <div class="course__copy">
-        <span class="course__tag">12-week course · International standard</span>
-        <h2 class="course__title">Certified Personal Trainer</h2>
-        <p class="course__desc">This isn't a course that teaches you to count reps. It trains you to assess a client, design a program around their actual limitations, and adjust it when the plan meets reality.</p>
-        <ul class="course__learn">
-          <li>Anatomy, physiology &amp; movement mechanics</li>
-          <li>Program design &amp; periodization</li>
-          <li>Client assessment &amp; correction</li>
-          <li>Communication &amp; coaching skills</li>
-        </ul>
-        <div class="course__foot">
-          <p class="course__price"><span class="cur">₹</span>30,000<small>12 weeks · online / offline / hybrid</small></p>
-          <a href="courses-personal-trainer.html" class="btn btn--solid">View Details &amp; FAQ</a>
-          <a href="contact.html" class="course__more">Enroll now →</a>
+  <section class="wrap" data-cms-show="courses.list.show">
+    <div data-cms-list="courses.list.items">
+      <article class="course" data-reveal data-cms-item>
+        <figure class="course__media"><img data-cms="src:image|alt:title" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80&auto=format&fit=crop" alt="Personal trainer coaching explosive strength work" /></figure>
+        <div class="course__copy">
+          <span class="course__tag" data-cms="text:tag">12-week course · International standard</span>
+          <h2 class="course__title" data-cms="text:title">Certified Personal Trainer</h2>
+          <p class="course__desc" data-cms="text:desc">This isn't a course that teaches you to count reps. It trains you to assess a client, design a program around their actual limitations, and adjust it when the plan meets reality.</p>
+          <ul class="course__learn" data-cms-list="learn">
+            <li data-cms-item data-cms="text:text">Anatomy, physiology &amp; movement mechanics</li>
+          </ul>
+          <div class="course__foot">
+            <p class="course__price"><span class="cur" data-cms-show="price">₹</span><span data-cms="text:price">30,000</span><small data-cms="text:priceNote">12 weeks · online / offline / hybrid</small></p>
+            <a data-cms="href:detailLink" href="courses-personal-trainer.html" class="btn btn--solid">View Details &amp; FAQ</a>
+            <a data-cms="text:enrollLabel|href:enrollLink" href="contact.html" class="course__more">Enroll now →</a>
+          </div>
         </div>
-      </div>
-    </article>
-
-    <!-- 2 -->
-    <article class="course course--flip" data-reveal>
-      <figure class="course__media"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80&auto=format&fit=crop" alt="Nutrition and meal planning" /></figure>
-      <div class="course__copy">
-        <span class="course__tag">4-month course · 24 modules</span>
-        <h2 class="course__title">Certified Weight Loss Nutritionist</h2>
-        <p class="course__desc">Weight loss advice is everywhere, and most of it doesn't hold up past week two. Learn to build sustainable, evidence-based strategies — and coach clients through the part that actually determines results: staying consistent.</p>
-        <ul class="course__learn">
-          <li>Metabolic &amp; weight-management science</li>
-          <li>Meal planning for real client behavior</li>
-          <li>Coaching psychology &amp; behavior change</li>
-          <li>Plateau &amp; medical/hormonal conditions</li>
-        </ul>
-        <div class="course__foot">
-          <p class="course__price"><span class="cur">₹</span>40,000<small>4 months · online / offline / hybrid</small></p>
-          <a href="courses-weight-loss-nutritionist.html" class="btn btn--solid">View Details &amp; FAQ</a>
-          <a href="contact.html" class="course__more">Enroll now →</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- 3 -->
-    <article class="course" data-reveal>
-      <figure class="course__media"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80&auto=format&fit=crop" alt="Physique athlete" /></figure>
-      <div class="course__copy">
-        <span class="course__tag">Speciality certification</span>
-        <h2 class="course__title">Contest-Prep &amp; Body Transformation Expert</h2>
-        <p class="course__desc">Coaching a physique athlete through competition prep is a different skill from general personal training — different timelines, different stakes, no room for guesswork. Learn to coach that process from off-season through peak week.</p>
-        <ul class="course__learn">
-          <li>Off-season &amp; contest-prep programming</li>
-          <li>Peak-week protocols</li>
-          <li>Posing &amp; presentation coaching</li>
-          <li>Body composition &amp; physique assessment</li>
-        </ul>
-        <div class="course__foot">
-          <p class="course__price">Enquire<small>taught by an International Bodybuilder</small></p>
-          <a href="courses-contest-prep.html" class="btn btn--solid">View Details &amp; FAQ</a>
-          <a href="contact.html" class="course__more">Enquire now →</a>
-        </div>
-      </div>
-    </article>
+      </article>
+    </div>
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="founder">
+  <section class="founder" data-cms-show="courses.howItWorks.show">
     <div class="founder__head">
-      <h2 class="h-section" data-reveal>How Certification <span class="accent">Works</span></h2>
+      <h2 class="h-section" data-reveal><span data-cms="text:courses.howItWorks.headingPre">How Certification</span> <span class="accent" data-cms="text:courses.howItWorks.headingAccent">Works</span></h2>
     </div>
     <div class="founder__grid" style="align-items:start">
-      <ol class="whatlist" style="border-top:1px solid var(--line)">
-        <li data-reveal><i>/01</i><span>Browse and choose your course</span></li>
-        <li data-reveal><i>/02</i><span>Apply or book a free counseling session</span></li>
-        <li data-reveal><i>/03</i><span>Attend classes, workshops &amp; assessments</span></li>
-        <li data-reveal><i>/04</i><span>Pass your evaluation &amp; get certified</span></li>
+      <ol class="whatlist" style="border-top:1px solid var(--line)" data-cms-list="courses.howItWorks.steps">
+        <li data-reveal data-cms-item><i data-cms="step:__index">/01</i><span data-cms="text:text">Browse and choose your course</span></li>
       </ol>
       <div class="founder__side">
-        <p class="founder__bio" data-reveal>Not sure which path fits? Book a free counseling call and we'll walk through your goals and recommend the certification that matches where you want your career to go.</p>
-        <a href="contact.html" class="btn btn--solid">Book a Free Counseling Call</a>
+        <p class="founder__bio" data-reveal data-cms="text:courses.howItWorks.note">Not sure which path fits? Book a free counseling call and we'll walk through your goals and recommend the certification that matches where you want your career to go.</p>
+        <a href="contact.html" class="btn btn--solid" data-cms="text:courses.howItWorks.ctaLabel|href:courses.howItWorks.ctaLink">Book a Free Counseling Call</a>
       </div>
     </div>
   </section>
@@ -146,17 +99,18 @@
   <footer class="footer">
     <div class="footer__cols">
       <div class="footer__brand">
-        <div class="nav__brand"><svg class="nav__mark" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M2 9h2v6H2zM20 9h2v6h-2zM5 7h2v10H5zM17 7h2v10h-2zM8 11h8v2H8z" fill="currentColor"/></svg><span class="nav__name">NFTA</span></div>
-        <p>Train to coach. Built on science, not shortcuts.</p>
+        <div class="nav__brand"><svg class="nav__mark" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M2 9h2v6H2zM20 9h2v6h-2zM5 7h2v10H5zM17 7h2v10h-2zM8 11h8v2H8z" fill="currentColor"/></svg><span class="nav__name" data-cms="text:site.brand.name">NFTA</span></div>
+        <p data-cms="text:site.footer.tagline">Train to coach. Built on science, not shortcuts.</p>
       </div>
       <nav class="footer__nav" aria-label="Explore"><h4>Explore</h4><a href="about.html">About</a><a href="courses.html">Courses</a><a href="trainers.html">Trainers</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
-      <nav class="footer__nav" aria-label="Blog"><h4>Blog</h4><a href="blog.html">All Articles</a><a href="blog.html">Personal Training</a><a href="blog.html">Weight Loss</a><a href="blog.html">Contest Prep</a></nav><nav class="footer__nav" aria-label="Social"><h4>Follow</h4><a href="https://www.facebook.com/NFTA.Academy" target="_blank" rel="noopener">Facebook</a><a href="https://instagram.com/nfta.academy" target="_blank" rel="noopener">Instagram</a></nav>
-      <div class="footer__nav"><h4>Reach us</h4><a href="mailto:nftaacademy@gmail.com">nftaacademy@gmail.com</a><a href="tel:09008343579">090083 43579</a></div>
+      <nav class="footer__nav" aria-label="Blog"><h4>Blog</h4><a href="blog.html">All Articles</a><a href="blog.html">Personal Training</a><a href="blog.html">Weight Loss</a><a href="blog.html">Contest Prep</a></nav><nav class="footer__nav" aria-label="Social"><h4>Follow</h4><a data-cms="href:site.contact.facebook" href="https://www.facebook.com/NFTA.Academy" target="_blank" rel="noopener">Facebook</a><a data-cms="href:site.contact.instagram" href="https://instagram.com/nfta.academy" target="_blank" rel="noopener">Instagram</a></nav>
+      <div class="footer__nav"><h4>Reach us</h4><a data-cms="text:site.contact.email|mailto:site.contact.email" href="mailto:nftaacademy@gmail.com">nftaacademy@gmail.com</a><a data-cms="text:site.contact.phoneDisplay|tel:site.contact.phoneHref" href="tel:09008343579">090083 43579</a></div>
     </div>
-    <div class="footer__wordmark" aria-hidden="true">NFTA</div>
-    <div class="footer__base"><p>© 2026 NFTA — Nutrition and Fitness Trainers Alliance.</p><p>Built on science. Made to coach.</p></div>
+    <div class="footer__wordmark" aria-hidden="true" data-cms="text:site.brand.name">NFTA</div>
+    <div class="footer__base"><p data-cms="text:site.footer.copyright">© 2026 NFTA — Nutrition and Fitness Trainers Alliance.</p><p data-cms="text:site.footer.tagline2">Built on science. Made to coach.</p></div>
   </footer>
 
+  <script type="module" src="assets/js/site-render.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="assets/js/main.js?v=7"></script>

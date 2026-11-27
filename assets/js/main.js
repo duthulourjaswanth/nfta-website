@@ -181,18 +181,19 @@ function nav(){
     a.addEventListener('click', ()=> el.classList.remove('mobile-open')));
 }
 
-/* ---------- Contact form (front-end only) ---------- */
+/* ---------- Contact form ----------
+   Actual submission (Firestore + WhatsApp fallback) is handled by
+   assets/js/site-render.js, which owns the submit listener. This just
+   animates the "thanks" note in once site-render reveals it. */
 function form(){
   const f = document.querySelector('.contact__form');
   if(!f) return;
   const note = f.querySelector('.form-note');
-  f.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    if(!f.checkValidity()){ f.reportValidity(); return; }
-    if(note) note.hidden = false;
-    f.reset();
-    if(note) gsap.fromTo(note, { opacity:0, y:8 }, { opacity:1, y:0, duration:.4 });
+  if(!note) return;
+  const mo = new MutationObserver(()=>{
+    if(!note.hidden) gsap.fromTo(note, { opacity:0, y:8 }, { opacity:1, y:0, duration:.4 });
   });
+  mo.observe(note, { attributes:true, attributeFilter:['hidden'] });
 }
 
 /* ---------- FAQ accordion (GSAP height, no layout-thrash CSS) ---------- */

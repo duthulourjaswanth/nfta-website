@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>NFTA Admin</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b0b0d'/%3E%3Cpath d='M2 9h2v6H2zM20 9h2v6h-2zM5 7h2v10H5zM17 7h2v10h-2zM8 11h8v2H8z' fill='%23e11414'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- ============ SETUP NOTICE (shown when firebase-config.js still has placeholders) ============ -->
+  <section id="setup-screen" class="screen screen--center" hidden>
+    <div class="setup-card">
+      <div class="brand-mark"><span>N</span><span>F</span><span>T</span><span>A</span></div>
+      <h1>Almost there</h1>
+      <p>The admin panel isn't connected to Firebase yet. Open <code>SETUP-ADMIN.md</code> in the project folder and follow the steps — it's written for a non-technical setup, no coding needed.</p>
+      <p class="setup-card__hint">Once <code>firebase-config.js</code> and <code>cloudinary-config.js</code> have real values instead of placeholders, reload this page.</p>
+    </div>
+  </section>
+
+  <!-- ============ LOGIN ============ -->
+  <section id="login-screen" class="screen screen--center" hidden>
+    <form id="login-form" class="login-card" novalidate>
+      <div class="brand-mark"><span>N</span><span>F</span><span>T</span><span>A</span></div>
+      <h1>Admin sign in</h1>
+      <p class="login-card__hint">Accounts are created by hand in the Firebase console — there's no sign-up here.</p>
+      <label class="field">
+        <span class="field__label">Email</span>
+        <input type="email" name="email" autocomplete="username" required />
+      </label>
+      <label class="field">
+        <span class="field__label">Password</span>
+        <input type="password" name="password" autocomplete="current-password" required />
+      </label>
+      <p id="login-error" class="login-error" hidden></p>
+      <button type="submit" class="btn-primary">Sign in</button>
+      <button type="button" id="login-forgot" class="link-btn">Forgot password?</button>
+    </form>
+  </section>
+
+  <!-- ============ APP ============ -->
+  <section id="app-screen" class="screen screen--app" hidden>
+    <header class="topbar">
+      <button id="sidebar-toggle" class="topbar__burger" aria-label="Toggle menu">☰</button>
+      <div class="topbar__brand">
+        <div class="brand-mark brand-mark--sm"><span>N</span><span>F</span><span>T</span><span>A</span></div>
+        <span>Admin</span>
+      </div>
+      <div class="topbar__spacer"></div>
+      <span id="dirty-indicator" class="dirty-indicator" hidden>● Unpublished changes</span>
+      <button id="undo-btn" class="btn-sm" disabled>Undo changes</button>
+      <button id="publish-btn" class="btn-primary btn-primary--sm" disabled>Publish changes</button>
+      <span id="user-email" class="topbar__email"></span>
+      <button id="signout-btn" class="btn-sm">Sign out</button>
+    </header>
+
+    <div class="app-body">
+      <aside id="sidebar" class="sidebar">
+        <nav id="sidebar-nav" class="sidebar__nav"></nav>
+        <div class="sidebar__divider">Tools</div>
+        <nav id="sidebar-nav-custom" class="sidebar__nav"></nav>
+      </aside>
+      <main id="pane-content" class="pane"></main>
+    </div>
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
